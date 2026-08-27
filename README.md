@@ -79,3 +79,8 @@ manually:
 2. Reload Obsidian (or run "Reload app without saving" from the command palette) and enable
    "Ambient Backlinks" under Settings → Community plugins.
 3. Open plugin settings and set an API base URL (e.g. a local Ollama server) and chat model.
+
+## Support
+
+If this plugin is useful to you, you can support its development at
+[Buy Me a Coffee](https://buymeacoffee.com/aguila1989).
