@@ -9,7 +9,8 @@ export default class AmbientBacklinksPlugin extends Plugin {
   cache = new ExplainCache();
 
   async onload(): Promise<void> {
-    this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
+    const data = (await this.loadData()) as Partial<AmbientBacklinksSettings> | null;
+    this.settings = Object.assign({}, DEFAULT_SETTINGS, data);
     this.addSettingTab(new AmbientBacklinksSettingTab(this.app, this));
 
     this.registerView(VIEW_TYPE_AMBIENT_BACKLINKS, (leaf) => new AmbientBacklinksView(leaf, this));
@@ -49,7 +50,7 @@ export default class AmbientBacklinksPlugin extends Plugin {
   async activateView(): Promise<void> {
     const existing = this.app.workspace.getLeavesOfType(VIEW_TYPE_AMBIENT_BACKLINKS);
     if (existing.length > 0) {
-      this.app.workspace.revealLeaf(existing[0]);
+      await this.app.workspace.revealLeaf(existing[0]);
       return;
     }
     const leaf = this.app.workspace.getRightLeaf(false);
@@ -58,6 +59,6 @@ export default class AmbientBacklinksPlugin extends Plugin {
       return;
     }
     await leaf.setViewState({ type: VIEW_TYPE_AMBIENT_BACKLINKS, active: true });
-    this.app.workspace.revealLeaf(leaf);
+    await this.app.workspace.revealLeaf(leaf);
   }
 }

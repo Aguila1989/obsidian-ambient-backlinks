@@ -35,7 +35,7 @@ export class AmbientBacklinksSettingTab extends PluginSettingTab {
     const { containerEl } = this;
     containerEl.empty();
 
-    containerEl.createEl("h3", { text: "LLM connection" });
+    new Setting(containerEl).setName("LLM connection").setHeading();
 
     new Setting(containerEl)
       .setName("API base URL")
@@ -77,7 +77,7 @@ export class AmbientBacklinksSettingTab extends PluginSettingTab {
           })
       );
 
-    containerEl.createEl("h3", { text: "Behavior" });
+    new Setting(containerEl).setName("Behavior").setHeading();
 
     new Setting(containerEl)
       .setName("Explanation mode")

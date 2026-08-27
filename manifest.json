@@ -1,11 +1,11 @@
 {
-    "id":  "ambient-backlinks",
-    "name":  "Ambient Backlinks",
-    "version":  "0.1.0",
-    "minAppVersion":  "1.5.0",
-    "description":  "One-line AI summaries of how each backlinked note relates to the current one.",
-    "author":  "Aguila1989",
-    "isDesktopOnly":  false,
-    "authorUrl":  "https://github.com/Aguila1989",
-    "fundingUrl":  "https://buymeacoffee.com/aguila1989"
+  "id": "ambient-backlinks",
+  "name": "Ambient Backlinks",
+  "version": "0.1.1",
+  "minAppVersion": "1.7.2",
+  "description": "One-line AI summaries of how each backlinked note relates to the current one.",
+  "author": "Aguila1989",
+  "isDesktopOnly": false,
+  "authorUrl": "https://github.com/Aguila1989",
+  "fundingUrl": "https://buymeacoffee.com/aguila1989"
 }
