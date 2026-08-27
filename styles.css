@@ -1,0 +1,122 @@
+.ambient-backlinks-view .view-content {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.ambient-backlinks-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--background-modifier-border);
+  position: sticky;
+  top: 0;
+  background: var(--background-primary);
+  z-index: 1;
+}
+
+.ambient-backlinks-count {
+  font-size: var(--font-ui-small);
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.ambient-backlinks-header button {
+  font-size: var(--font-ui-smaller);
+  padding: 2px 10px;
+}
+
+.ambient-backlinks-loading {
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+}
+
+.ambient-backlinks-error {
+  margin: 8px 12px 0 12px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background: var(--background-modifier-error);
+  color: var(--text-error);
+  font-size: var(--font-ui-smaller);
+}
+
+.ambient-backlinks-empty {
+  padding: 16px 12px;
+  color: var(--text-muted);
+  font-size: var(--font-ui-small);
+}
+
+.ambient-backlinks-list {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.ambient-backlinks-item {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.ambient-backlinks-item:hover {
+  background: var(--background-secondary);
+}
+
+.ambient-backlinks-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.ambient-backlinks-title {
+  font-weight: 600;
+  color: var(--text-normal);
+  cursor: pointer;
+  text-decoration: none;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ambient-backlinks-title:hover {
+  color: var(--interactive-accent);
+  text-decoration: underline;
+}
+
+.ambient-backlinks-toggle {
+  cursor: pointer;
+  color: var(--text-faint);
+  font-size: var(--font-ui-smaller);
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.ambient-backlinks-toggle:hover {
+  color: var(--text-normal);
+}
+
+.ambient-backlinks-relationship {
+  margin-top: 2px;
+  font-size: var(--font-ui-small);
+  color: var(--text-normal);
+  line-height: 1.4;
+}
+
+.ambient-backlinks-relationship.is-pending {
+  color: var(--text-faint);
+  font-style: italic;
+}
+
+.ambient-backlinks-snippet {
+  margin-top: 6px;
+  padding: 6px 8px;
+  border-left: 2px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller);
+  white-space: pre-wrap;
+  border-radius: 0 4px 4px 0;
+}

@@ -1,0 +1,9 @@
+{
+  "id": "ambient-backlinks",
+  "name": "Ambient Backlinks",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "One-line AI summaries of how each backlinked note relates to the current one.",
+  "author": "Kevin Demeulenaere",
+  "isDesktopOnly": false
+}
