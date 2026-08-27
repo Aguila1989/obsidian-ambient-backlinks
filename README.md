@@ -60,6 +60,15 @@ relationship line per source.
 - No retry/backoff on LLM errors beyond surfacing a `Notice`; a failed batch simply leaves those
   rows as "Not explained yet" until the next explain pass.
 
+## Privacy and network use
+
+This plugin only makes network requests to the LLM endpoint **you configure** in its settings
+(OpenAI-compatible; a local Ollama or LM Studio works fully offline). The title of the active note
+and the linking paragraph from each backlinking note are sent to that endpoint to generate the
+relationship summaries. Nothing is sent anywhere else, no telemetry is collected, and no requests
+are made until an endpoint is configured. Using a hosted provider may require a paid account with
+that provider.
+
 ## Installation
 
 This plugin is not yet available in the Obsidian community plugin store. To try it, install it
